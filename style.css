@@ -1,13 +1,32 @@
 body {
-  background-color: #f8edeb
+	background: linear-gradient(-45deg, #844948, #9E5857, #B77D7B, #CCA4A3, #DBBEBD );
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .container {
-  background-color: #fbf8f7;
+  background-color: #F8F2F2;
   width: 400px;
+  height: 890px;
   margin: 30% auto;
   border-radius: 15px;
-  padding: 2.5em;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  padding-right: 30px;
 }
 
 .petal {
@@ -17,6 +36,19 @@ body {
   margin-left: 20px;
   border-radius: 120px 15px;
   text-align: right;
+}
+.petal:hover {
+  border: 6px solid #fe957f;
+  transition-duration: 0.3s;
+}
+
+.cursor-icon {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><rect width="20" height="20" rx="4" ry="4" fill="%23ff7b61"/><path fill="%23ff7b61" d="M10 4.95a1 1 0 0 1 2 0v3.1h3.1a1 1 0 0 1 0 2H12v3.1a1 1 0 0 1-2 0V10H6.9a1 1 0 0 1 0-2H10V4.95z"/></svg>'), auto;
 }
 
 h1 {
@@ -34,9 +66,12 @@ h1 {
 }
 
 h1:hover {
-  text-shadow: 2px 2px 5px #ff9987;
-  transition-duration: 0.4s;
-}
+    transition-duration: 0.3s;
+    background-color: #ff7b61;
+    color: #F1E4E4 ;
+    border: 6px solid #fe957f;
+    transition-duration: 0.3s;
+  }
 
 h2 {
   font-size: 16px;
@@ -77,37 +112,51 @@ ul {
   height: 350px;
   margin-left: 20px;
   border-radius: 15px 120px;
+  text-align: center;
+}
+
+#profile-pic:hover {
+  border: 6px solid #fe957f;
+  transition-duration: 0.3s;
 }
 
 #pink-button {
-  background-color: #fbf8f7;
+  background-color: #F8F2F2;
   font-family: 'Fira Sans', sans-serif;
   color: #ff7b61;
   font-size: 13px;
-  border-radius: 5px 12px;
-  padding: 5px;
+  border-radius: 5px 20px;
+  padding: 15px;
   border: 1.5px solid #ff7b61;
   float: left;
   margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  clear: both
+  margin-top: 0px;
+  clear: bottom
 }
 
 #pink-button:hover {
   transition-duration: 0.3s;
-  background-color: #ff7b61;
+  background-color: rgb(255, 123, 97);
   color: #fbf8f7;
+  border: 7px solid #fe957f;
+  transition-duration: 0.3s;
 }
 
 .social-media {
-  border: 2px solid #fe957f;
-  width: 100px;
-  height: 30px;
+  border: 1px solid #fe957f;
+  width: 120px;
+  height: 35px;
   margin-left: 20px;
-  border-radius: 10px 35px;
-  clear: top;
+  margin-top: 50px;
+  border-radius: 35px 10px;
   text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media a {
   text-decoration: none;
 }
 
